@@ -1,48 +1,65 @@
-# Python generated files
-__pycache__
+# ── Python ────────────────────────────────────────────────
+__pycache__/
 *.pyc
+*.pyo
+.mypy_cache/
+*.egg-info/
+.pytest_cache/
+.coverage
 
-# Sphinx generated files
-doc/build
-doc/source/volatility3.*
+# ── Virtual environments ──────────────────────────────────
+.env
+.env.local
+*.env
+.venv/
+venv/
+env/
+ENV/
 
-# Pycharm/PyDev development files
-workspace.xml
-.idea
-.vscode
+# ── Secrets ───────────────────────────────────────────────
+secrets.py
+config_local.py
 
-# Manually generated files
-.mypy_cache
-stubs
+# ── Memory dumps & evidence files ────────────────────────
+*.dmp
+*.vmem
+*.raw
+*.mem
+*.img
+*.E01
+*.001
+
+# ── Volatility output & analysis artifacts ───────────────
+vol_dumps/
+tagged.json
+*.report.json
+report.md
+report.html
+*_writeup.html
+*_writeup.md
+config*.json
+
+# ── Volatility symbols (auto-downloaded, not committed) ──
 volatility3/symbols/linux*
 volatility3/symbols/windows*
 volatility3/symbols/mac*
 
-# Mac metadata files
+# ── Build / packaging ─────────────────────────────────────
+build/
+dist/
+stubs/
+doc/build/
+doc/source/volatility3.*
+
+# ── IDE files ─────────────────────────────────────────────
+.idea/
+.vscode/
+workspace.xml
+
+# ── OS files ──────────────────────────────────────────────
 .DS_Store
+Thumbs.db
 
-# Volatility's config
-config*.json
-
-# Pyinstaller files
-build
-dist
-*.egg-info
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-
-# Memory dump files
-*.dmp
-*.vmem
-*.img
-
-# PyTest cache files
-.pytest_cache/
-
-# Coverage cache
-.coverage
+# ── PyInstaller ───────────────────────────────────────────
+*.spec
+test_procs.json
