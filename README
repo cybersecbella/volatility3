@@ -1,7 +1,0 @@
-## Enhancements in this fork
-
-| Feature | File | Description |
-|---|---|---|
-| ATT&CK TTP tagger | `plugins/custom/attck_tagger.py` | Tags every finding with MITRE T-numbers |
-| AI explainer plugin | `plugins/custom/vol_ai_explain.py` | Claude explains suspicious processes in plain English |
-| LangChain NL wrapper | `vol_langchain.py` | Query your memory dump in natural language |
