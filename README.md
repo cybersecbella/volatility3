@@ -1,4 +1,48 @@
 # Volatility 3: The volatile memory extraction framework
+# Volatility 3 — AI-Enhanced Fork
+> Built by [cybersecbella](https://cybersecbella.com) | 
+> Fork of [volatilityfoundation/volatility3](https://github.com/volatilityfoundation/volatility3)
+
+An AI-powered memory forensics pipeline built on top of Volatility 3. 
+Automatically tags findings with MITRE ATT&CK techniques, explains them 
+in plain English using Claude AI, and lets you query memory dumps (for supicious processes, network connections, etc.) in 
+natural language.
+
+## Enhancements
+
+| Feature | File | Description |
+|---|---|---|
+| ATT&CK TTP tagger | `volatility3/plugins/custom/attck_tagger.py` | Tags every finding with MITRE T-numbers and risk scores |
+| AI explainer plugin | `vol_ai_explain.py` | Claude explains suspicious processes in plain English |
+| LangChain NL wrapper | `vol_langchain.py` | Query your memory dump in natural language |
+
+## Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+Set your API key:
+```powershell
+$env:ANTHROPIC_API_KEY = "sk-ant-..."
+```
+
+## Usage
+
+```powershell
+# Natural language investigation
+python vol_langchain.py --dump memory.dmp
+
+# AI-generated report
+python vol_ai_explain.py tagged.json --format html --out report.html
+```
+
+## Blog
+Writeups and walkthroughs at [cybersecbella.com](https://www.cybersecbella.com/)
+
+---
+*Original Volatility 3 documentation below*
+
 
 Volatility is the world's most widely used framework for extracting digital
 artifacts from volatile memory (RAM) samples. The extraction techniques are
